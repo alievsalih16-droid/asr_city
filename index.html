@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASR CITY</title>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        body {
+            margin: 0;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial;
+        }
+        h1 {
+            font-size: 22px;
+            color: #333;
+        }
+    </style>
+
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+
+        window.onload = function() {
+            setTimeout(() => {
+                window.location.href = "https://t.me/asrcity_bot";
+            }, 800);
+        };
+    </script>
+</head>
+<body>
+    <h1>Открываю ASR CITY…</h1>
+</body>
+</html>
